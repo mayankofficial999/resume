@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Mayank Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+        }
+        
+        .pdf-container {
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            overflow: hidden;
+        }
+        
+        .pdf-embed {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .fallback-message {
+            display: none;
+            padding: 40px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .fallback-message a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .fallback-message a:hover {
+            text-decoration: underline;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="pdf-container">
+        <embed 
+            src="resume.pdf" 
+            type="application/pdf" 
+            class="pdf-embed"
+            id="pdf-embed"
+        >
+        
+        <div class="fallback-message" id="fallback-message">
+            <h3>PDF Preview Not Available</h3>
+            <p>Your browser doesn't support PDF embedding.</p>
+            <p><a href="resume.pdf" target="_blank">Click here to open the PDF in a new tab</a></p>
+        </div>
+    </div>
+    
+    <script>
+        // Check if PDF embed is supported and show fallback if needed
+        window.addEventListener('load', function() {
+            const embed = document.getElementById('pdf-embed');
+            const fallback = document.getElementById('fallback-message');
+            
+            // Simple check for PDF support
+            setTimeout(function() {
+                try {
+                    if (embed.offsetHeight === 0) {
+                        embed.style.display = 'none';
+                        fallback.style.display = 'block';
+                    }
+                } catch (e) {
+                    embed.style.display = 'none';
+                    fallback.style.display = 'block';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html> 
