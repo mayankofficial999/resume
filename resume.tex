@@ -1,0 +1,277 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+% \usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08003pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingg}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjSubheadingg}[2]{
+  \vspace{-2pt}
+  
+    % \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{itemize}
+       \item {#1}   \hspace*{\fill}{\textbf{\small #2}} 
+    \end{itemize}
+    \vspace{-12pt}
+    
+    % \end{tabular*}
+    
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    {\Huge \scshape Mayank Sharma} \\ \vspace{8pt}
+    
+    \small 
+    \href{mailto:mayankofficial999@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{mayankofficial999@gmail.com}} ~ 
+    % \href{https://sloorush.com}{\raisebox{-0.2\height}\faLink\   \underline{sloorush.com}} ~
+    \href{tel://+919549962822}{\raisebox{-0.2\height}\faPhone\   \underline{+91 9549962822}} ~
+    \href{https://www.linkedin.com/in/mayank-sharma-743909209/}{\raisebox{-0.2\height}\faLinkedin\ \underline{mayank-sharma-743909209}}  ~
+    \href{https://github.com/mayankofficial999}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/mayankofficial999}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {Vellore Institute of Technology, Vellore}{Aug 2020 -- July 2024}
+      {B.Tech in Computer Science and Engineering}{8.35, CGPA}
+
+      % \resumeSubheading
+      % {New Look Sr. Secondary School, Kota}{Apr 2018 -- Apr 2020}
+      % {Central Board of Secondary Education (CBSE)}{88.2\%}
+
+      % \resumeSubheading
+      % {Metropolitan School, Gorakhpur}{Apr 2016 -- Apr 2018}
+      % {Indian Certificate of Secondary Education (ICSE)}{92.7\%}
+  \resumeSubHeadingListEnd
+  \vspace{-12pt}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+\resumeSubheadingg
+      {\href{https://dyte.io/}{Dyte} (Intern + SDE)}{May 2022 -- Present}
+      \resumeItemListStart
+        \resumeItem{Developed a \href{https://www.npmjs.com/package/@dytesdk/react-native-core}{Core} and \href{https://www.npmjs.com/package/@dytesdk/react-native-ui-kit}{UI-Kit} library that improves customisability and usage of SDKs}
+        \resumeItem{Wrote \href{https://dyte.io/blog/react-native-ui-kit/}{blogs} on technical topics}
+        \resumeItem{Effectively communicated with Clients and resolved their issues}
+        \resumeItem{Improved and maintained performance of the react native SDKs}
+    \resumeItemListEnd
+    % \vspace{-6pt}
+      \resumeSubheadingg
+      {\href{https://thesalemaeropark.com/}{Aerospace Engineers Private Limited} (Robotics Intern)}{Nov 2021 -- Dec 2021}
+      \resumeItemListStart
+        \resumeItem{Developed software to control the robot's actuators}
+        \resumeItem{Developed modular code to navigate the bot based on Computer Vision and Sensor Information}
+        \resumeItem{Troubleshooted and debugged ROS programs}
+        \resumeItem{Developed cross-platform compatible GUI in PyQt5.}
+    \resumeItemListEnd
+    % \vspace{-6pt}
+  \resumeSubHeadingListEnd
+
+\vspace{-12pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheadingg
+      {\href{https://pub.dev/packages/easy_firebase}{Easy Firebase}}{}
+      \resumeItemListStart
+        \resumeItem{Flutter package to quickly setup and use many firebase functionalities with wrapper
+functions including Authentication , Realtime Database , Firestore Database and Firebase Storage.}
+        \resumeItem{Reduces firebase integration from hours to less than 10 mins}
+        \resumeItem{Published to pub.dev, ready to integrate as a dependency in any flutter project}
+
+    \resumeItemListEnd
+    % \vspace{-6pt}
+  \resumeSubheadingg
+      {\href{https://github.com/mayankofficial999/Intern_Task}{RobotX USV Navigator}}{}
+      \resumeItemListStart
+        \resumeItem{ROS project to simulate and control the trajectory of RobotX USV Robot}
+        \resumeItem{3 variants of options available to specify the path: Linear, Circular, Lawn-Mover}
+        \resumeItem{Implemented PID Control System in Python}
+        \resumeItem{PyQT5 based GUI to fine tune the parameters for the bot}
+        \resumeItem{Cross Platform control Support }
+    \resumeItemListEnd
+    % \vspace{-6pt}
+
+ \resumeSubheadingg
+      {\href{https://github.com/mayankofficial999/CrashFinder}{CrashFinder}}{}
+    \resumeItemListStart
+        \resumeItem{Android native library to catch unhandled exceptions}
+        \resumeItem{Implemented JNI to interop Kotlin with NDK support in C++ and extract process details from SE-Linux in Android.}
+        \resumeItem{Sent crash data to a Node server via POST request}
+    \resumeItemListEnd
+    % \vspace{-6pt}
+    
+    \resumeSubheadingg
+      {\href{https://github.com/mayankofficial999/MagicAutomation}{MagicAutomation}}{}
+      \resumeItemListStart
+        \resumeItem{A C++ library that acts as a framework to build Arduino-based Home Automation systems}
+        \resumeItem{Feature to add/remove a node}
+        \resumeItem{AES based encryption to encrypt/decrypt data to preserve privacy}
+        \resumeItem{Tree like architecture to support hierarchical nodes}
+    \resumeItemListEnd
+    % \vspace{-6pt}
+    
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------LEADERSHIP---------------
+\section{Leadership / Extracurricular}
+    \resumeSubHeadingListStart
+        \resumeSubheadingg{{Projects Lead, \href{https://ieeevit.org}{IEEE-VIT}}}{Dec 2020 -- Dec 2023}
+            \resumeItemListStart
+                \resumeItem{Responsible for development of innovative projects while mentoring the team to solve real world problems and deliver it to help the community}
+                \resumeItem{Developed software for events and projects used by 1500+ participants in 100+ countries.}
+                \resumeItem{Speaker at “\href{https://www.youtube.com/watch?v=PgP3Cd8W-eg&ab_channel=IEEEVITVellore}{Techloop Alpha 2022}”, guiding 1000+ students in App Development.}
+
+            \resumeItemListEnd
+        \resumeSubheadingg{{Computer Vision Head, \href{https://www.linkedin.com/company/vauv/about/}{VAUV}}}{Sep 2022 -- Dec 2023}
+            \resumeItemListStart
+                \resumeItem{Responsible for developing solutions of computer vision algorithms for Underwater Robot}
+                \resumeItem{Worked with the Team to solve underwater navigation via Image Processing and Deep Learning}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    
+
+\vspace{-12pt}
+   
+% -----------SKILLS AND INTERESTS--------
+\section{Skills and Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+ 
+     \textbf{Programming Languages}{: Kotlin, Dart, Objective C, Go, JavaScript, TypeScript, NodeJS, Python3, Java, C, C++}
+
+  \textbf{Relevant Coursework}{:  Data Structures and Algorithms, Database Management Systems, Objected Oriented Programming, Operating Systems, Computer Networks, Computer Architecture and Organization, Theory of Computation, Cryptography Fundamentals, Cyber Security, Network Security, Web Security}
+
+\textbf{Miscellaneous}{:  Android Studio, XCode, Robot Operating System, Linux, Git, GitHub, Jira, Postman, PostgreSQL, MongoDB, MySQL, Azure, AWS}
+
+\textbf{Qualities}{: Confident, Multitasker, Quick-learner, Adaptive, Team player, Problem Solving}
+     
+    }}
+ \end{itemize}
+ 
+\vspace{-12pt}
+
+\end{document}

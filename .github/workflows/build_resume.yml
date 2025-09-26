@@ -1,0 +1,40 @@
+name: Build LaTeX Resume
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '*.pdf'  # Skip CI when only PDF files are changed
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
+          fetch-depth: 0
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+
+      - name: Commit PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add the generated PDF
+          git add *.pdf
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No PDF changes to commit"
+          else
+            # Commit with [skip ci] to prevent infinite loop
+            git commit -m "chore: auto-updated resume PDF [skip ci]"
+            git push
+          fi
